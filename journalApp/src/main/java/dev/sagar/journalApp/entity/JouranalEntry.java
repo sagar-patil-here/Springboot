@@ -1,12 +1,16 @@
 package dev.sagar.journalApp.entity;
 
+import lombok.Data;
+import lombok.NonNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
+@Data
 public class JouranalEntry {
     @Id
     private int id;
+    @NonNull
     private String title;
     private String content  ;
 
